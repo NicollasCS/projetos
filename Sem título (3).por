@@ -2,10 +2,11 @@ programa {
   funcao inicio() {
 
     inteiro contador
+    contador = 10
 
-    para(contador = 1; contador <=10; contador++){  
+    enquanto(contador>=0){
       escreva(contador,"\n")
-      escreva("teve interação e somou um\n")
+      contador--
     }
     
   }

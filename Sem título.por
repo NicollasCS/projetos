@@ -1,28 +1,42 @@
 programa {
   funcao inicio() {
+    
+    real cpf,idade,opcao
+    cadeia nome,senha, cidade, pais
 
-    real idade
-    caracter nome,nomes
-//-------------------------------
-    escreva("qual sua idade? ")
-    leia(idade)
+    escreva("                                                              -----=====BANCO=====-----")
+    escreva("\n                                                              Escolha a opção desejada")
+    escreva("\n\n1 . Sair\n2 . Cadastro\n3 . Login\n4 . Consultar saldo\n\n : ")
+    leia(opcao)
 
-    se(idade <= 17){
-      escreva("acesso negado")}
+    escolha(opcao){
+    caso 1:
+    escreva("Operação cancelada.")
+    retorne
 
-    senao se(idade >=18){
-      escreva("acesso permitido. ")}
-//-------------------------------
-    se(idade >=18){
-    escreva("\n\nqual seu nome? ")
-    leia(nome)}
-//-------------------------------
+    caso 2:
+    escreva("Para começar, digite seus dados:\nSeu nome: ")
     leia(nome)
-    se(nome == "Gabriel Borba"){
-    escreva("acesso negado.")}
-//------------------------------- abaixo nao copiar
-    senao leia(nome)
-    se(nome == "Raphael Carpes"){
-    escreva("Acesso liberado.")}
+    escreva("\nSua idade: ")
+    leia(idade)
+    se(idade<18){
+      escreva("Você não pode criar uma conta sendo menor de idade!")
+      retorne
+    }
+    escreva("\nSeu CPF: ")
+    leia(cpf)
+    se(cpf>99999999999){
+      escreva("CPF inválido!")
+      retorne
+    }
+    escreva("Digite sua senha: \n")
+    leia(senha)
+
+    escreva("Cidade/País (Em ordem) : \n")
+    leia(cidade,pais)
+
+    escreva("Escolha uma opção : \n1 . Sair\n2 . Ver saldo")
+ 
+   }
   }
 }
